@@ -1,0 +1,5 @@
+name: brianarn@github
+permalink: /:categories/:year/:month/:title
+
+safe: true
+pygments: true

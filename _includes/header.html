@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ site.name }}</title>
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="/css/site.css" type="text/css" media="screen" charset="utf-8">
+	{% if page.dojo %}<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" data-dojo-config="{{ page.dojoConfig }}"></script>{% endif %}
+	{% if page.jquery %}<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>{% endif %}
+</head>
+<body>
+<div id="content">

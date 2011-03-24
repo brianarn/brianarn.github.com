@@ -1,0 +1,39 @@
+/*
+ * site.css
+ *
+ * Mmm, styles
+ */
+
+body {
+	/* This font's for you, Evan ;) */
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #0969A3;
+}
+
+h1 {
+	font-size: 42px;
+	padding: 10px 0px;
+}
+
+p {
+	margin: 10px 0px;
+}
+
+ul {
+	margin-left: 16px;
+}
+
+li {
+	list-style-type: square;
+	margin: 5px 0;
+}
+
+#content {
+	width: 900px;
+	margin: 0px auto;
+	background-color: #FFF;
+	padding: 20px;
+}
+
