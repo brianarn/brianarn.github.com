@@ -30,17 +30,18 @@ li {
 	margin: 5px 0;
 }
 
-body > header,
-body > footer,
+#site_header,
+#site_footer,
 #content {
 	width: 900px;
 	margin: 0px auto;
 	padding: 20px;
 	background-color: #DDD;
+	position: relative;
 	overflow: auto;
 }
 
-body > header > h2 {
+#site_header > h2 {
 	text-align: right;
 	font-size: 16px;
 	line-height: 20px;
@@ -54,4 +55,14 @@ body > header > h2 {
 .inset {
 	float: left;
 	margin: 4px 12px 6px 0px;
+}
+
+.copyright {
+	font-size: 12px;
+}
+
+.last_update {
+	font-size: 12px;
+	text-align: right;
+	margin-top: 10px;
 }
