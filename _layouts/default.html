@@ -4,18 +4,16 @@
 	<meta charset="UTF-8">
 	<title>{{ site.name }}</title>
 
-	<link ref="shortcut icon" href="/favicon.ico">
-	<link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen" charset="utf-8">
-	<link rel="stylesheet" href="/css/site.css" type="text/css" media="screen" charset="utf-8">
+	{% include site_meta.html %}
 
-	<link href="http://feeds.feedburner.com/brianarnATgithub" type="application/atom+xml" rel="alternate" title="brianarn@github Atom feed">
+	{% include site_css.html %}
 </head>
 <body>
+	{% include site_header.html %}
 	<div id="content">
-		<h1>{{ site.name }}</h1>
 		{{ content }}
 		<h2>Recent Posts</h2>
-		{% if site.posts.length > 0 %}
+		{% if site.posts.size > 0 %}
 		<ul>
 			{% for post in site.posts limit:5 %}<li><a href="{{ post.url }}">{{ post.title }}</a> &mdash; {{ post.date | date: "%B %d, %Y" }}</li>{% endfor %}
 		</ul>
@@ -23,6 +21,7 @@
 		<p>No posts yet... maybe someday...</p>
 		{% endif %}
 	</div> <!-- #content -->
+	{% include site_footer.html %}
 	{% include analytics.html %}
 </body>
 </html>

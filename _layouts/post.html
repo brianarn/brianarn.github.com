@@ -4,23 +4,31 @@
 	<meta charset="UTF-8">
 	<title>{{ page.title }} -- {{ site.name }}</title>
 
-	<link ref="shortcut icon" href="/favicon.ico">
-	<link rel="canonical" href="http://brianarn.github.com{{ page.url }}">
+	{% include site_meta.html %}
 
-	<link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen" charset="utf-8">
-	<link rel="stylesheet" href="/css/site.css" type="text/css" media="screen" charset="utf-8">
+	{% include site_css.html %}
 	<link rel="stylesheet" href="/css/post.css" type="text/css" media="screen" charset="utf-8">
-
-	<link href="http://feeds.feedburner.com/brianarnATgithub" type="application/atom+xml" rel="alternate" title="brianarn@github Atom feed">
 </head>
 <body>
+	{% include site_header.html %}
 	<div id="content">
-		<h1>{{ site.name }}</h1>
-		<h2>{{ page.title }}</h2>
-		<div id="post">
+		<article>
+			<header>
+				<h2>{{ page.title }}</h2>
+			</header>
+			<section id="postbody">
 			{{ content }}
-		</div> <!-- #post -->
+			</section>
+			<footer>
+				<ul class="meta">
+					<li>Posted on <time>{{ page.date | date: "%A, %B %d, %Y" }}</time></li>
+					<li>Categories: {% for cat in page.categories %} {{ cat | capitalize }} {% endfor %}</li>
+				</ul>
+			</footer>
+			{% include disqus.html %}
+		</article> <!-- #post -->
 	</div> <!-- #content -->
+	{% include site_footer.html %}
 	{% include analytics.html %}
 </body>
 </html>

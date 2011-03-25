@@ -1,4 +1,8 @@
 name: brianarn@github
+tagline: "Just another JavaScript junkie"
+url: http://brianarn.github.com
+feed: http://feeds.feedburner.com/brianarnAtgithub
+
 permalink: pretty
 
 auto: true

@@ -1,5 +1,19 @@
 /* CSS specific to _layouts/post.html */
 
-#post {
+#postbody {
 	width: 540px;
+}
+
+article { position: relative; }
+
+article > footer {
+	font-size: 12px;
+	position: absolute;
+	top: 60px;
+	right: 0px;
+	max-width: 300px;
+}
+
+.meta li {
+	list-style-type: none;
 }
