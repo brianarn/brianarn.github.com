@@ -15,9 +15,9 @@
 		<h1>{{ site.name }}</h1>
 		{{ content }}
 		<h2>Recent Posts</h2>
-		{% if site.posts %}
+		{% if site.posts.length > 0 %}
 		<ul>
-			{% for post in site.posts limit:5 %}<li><a href="{{ post.url }}">{{ post.title }}</a> &mdash; {{ post.date }}</li>{% endfor %}
+			{% for post in site.posts limit:5 %}<li><a href="{{ post.url }}">{{ post.title }}</a> &mdash; {{ post.date | date: "%B %d, %Y" }}</li>{% endfor %}
 		</ul>
 		{% else %}
 		<p>No posts yet... maybe someday...</p>
