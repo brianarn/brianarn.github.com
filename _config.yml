@@ -3,7 +3,7 @@ tagline: "Just another JavaScript junkie"
 url: http://brianarn.github.com
 feed: http://feeds.feedburner.com/brianarnAtgithub
 
-permalink: pretty
+permalink: /:categories/:year/:month/:title
 
 auto: true
 safe: true
