@@ -4,8 +4,6 @@ title: "Don't let jQuery DOMinate your thinking"
 category: thoughts
 ---
 
-### In the beginning
-
 For the past few years, I've been working on a side project at the [University
 of New Mexico][UNM]. There's not a public-facing aspect to it that's worth
 highlighting, but the administrative side is a very heavy JavaScript
