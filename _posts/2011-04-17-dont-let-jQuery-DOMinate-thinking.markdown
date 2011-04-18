@@ -4,6 +4,8 @@ title: "Don't let jQuery DOMinate your thinking"
 category: thoughts
 ---
 
+### In the beginning
+
 For the past few years, I've been working on a side project at the [University
 of New Mexico][UNM]. There's not a public-facing aspect to it that's worth
 highlighting, but the administrative side is a very heavy JavaScript
@@ -75,15 +77,30 @@ it's the first of all of the toolkits and libraries that's felt like I'm
 really writing JavaScript, and not just writing something else that doesn't
 feel like JS. I've grown to love JavaScript as a language for its own merits.
 
-So, if you're coming to this post and you're a huge jQuery fan who hasn't
-tried other tools -- I encourage you, reach out and try something else. It
-doesn't matter what you go for, so much as you're trying something different.
-Check out things like [Dojo][], [MooTools][], [YUI][],
-[Prototype][], or any of the other tools that are popping out of the
-woodwork. Heck, you could even just grab [Underscore][] and pull it in to your
-[jQuery][] app to start trying new approaches.
+So, whether you're coming to this post and you're a huge jQuery fan who hasn't
+tried other tools, or you're a seasoned vet with the DHTML scars to prove it
+-- I encourage you, reach out and try something else. It doesn't matter what
+you go for, so much as you're trying something different.
 
-Play. Learn. Grow.
+Larger libraries/toolkits (typically cross-browser, all with rich DOM/Ajax support,
+often including UI frameworks, etc):
+
+* [Dojo][]
+* [YUI][]
+* [MooTools][]
+* [Prototype][]
+
+Smaller libraries (focused on smecific pieces of functionality):
+
+* [Underscore][]
+* [Backbone][]
+* [Zepto][]
+
+Other reading:
+
+* [On jQuery & Large Application][large] (the original impetus for this post)
+* [jQuery's Best Friends][jqbff]
+* [When you're build a non-trivial JS application...][nontriv]
 
 [UNM]: http://www.unm.edu/
 [jQuery]: http://jquery.com/
@@ -93,3 +110,8 @@ Play. Learn. Grow.
 [Dojo]: http://www.dojotoolkit.org/
 [MooTools]: http://mootools.net/
 [Underscore]: http://documentcloud.github.com/underscore/
+[Backbone]: http://documentcloud.github.com/backbone/
+[Zepto]: http://zeptojs.com/
+[large]: http://blog.rebeccamurphey.com/on-jquery-large-applications
+[jqbff]: http://jquerysbestfriends.com/#slide1
+[nontriv]: http://blog.rebeccamurphey.com/when-youre-building-a-non-trivial-js-applicat
