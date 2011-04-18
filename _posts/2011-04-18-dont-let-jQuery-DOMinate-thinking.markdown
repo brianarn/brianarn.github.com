@@ -90,7 +90,7 @@ often including UI frameworks, etc):
 * [MooTools][]
 * [Prototype][]
 
-Smaller libraries (focused on smecific pieces of functionality):
+Smaller libraries (focused on specific pieces of functionality):
 
 * [Underscore][]
 * [Backbone][]
