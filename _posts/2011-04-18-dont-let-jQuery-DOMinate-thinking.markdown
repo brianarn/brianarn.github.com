@@ -31,9 +31,9 @@ However, jQuery made working with the DOM *so* much easier, and Ajax work was
 just dead simple (especially when cranking out JSON on the backend), so I
 stuck with it.
 
-After working in jQuery for a while, I stopped thinking about JavaScript. I
-let jQuery kind of take over my brain. For awhile, I fell really heavily in love
-with it. It felt just magical. Things just worked. Working with IE wasn't
+After working in jQuery for a while, *I stopped thinking about JavaScript*. I
+let jQuery kind of take over my brain. For a while, I fell really heavily in
+love with it. It felt just magical. Things just worked. Working with IE wasn't
 as awful (though still not great, of course).
 
 I was quite the fan of jQuery -- and in many ways, I still am. jQuery is
@@ -50,7 +50,7 @@ advantage of it, and managed to take one particular page from a load time of
 
 Over the past year, I've gone through and created a couple of new pages to
 replace some of the worst offenders, and tried cleaning up here and there where
-possible, but on the whole, I realized the major problem I'd ran into was that
+possible, but on the whole, I realized the major problem I'd run into was that
 I stopped thinking about my data as data, and started thinking about it more
 as DOM.
 
@@ -64,11 +64,11 @@ store JS objects. I was also doing things like not saving my resulting jQuery
 objects, running code like `$("#foo")` repeatedly, not thinking about the
 impact of creating several new jQuery collections. It's almost embarassing to
 admit that I was generating a bunch of `<li>` tags and actively adding them to
-the DOM one at a time, but I was.
+the DOM one at a time, for literally hundreds of list items, but I was.
 
-You'll note that **not** all of the things I was doing above are jQuery's fault.
-It's just that with jQuery, I stopped thinking about JS -- and, in retrospect,
-that was a really bad thing.
+You'll note that **not** all of the things I was doing above are jQuery's
+fault.  It's just that with jQuery, I stopped thinking about JavaScript --
+and, in retrospect, that was a really bad thing.
 
 These days, I'm doing a lot with [Dojo][] and while it's not the JS panacea,
 it's the first of all of the toolkits and libraries that's felt like I'm
@@ -79,6 +79,8 @@ So, whether you're coming to this post and you're a huge jQuery fan who hasn't
 tried other tools, or you're a seasoned vet with the DHTML scars to prove it
 -- I encourage you, reach out and try something else. It doesn't matter what
 you go for, so much as you're trying something different.
+
+### Resources
 
 Larger libraries/toolkits (typically cross-browser, all with rich DOM/Ajax support,
 often including UI frameworks, etc):
