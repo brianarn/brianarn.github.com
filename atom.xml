@@ -1,16 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[brianarn@github]]></title>
   <link href="http://brianarn.github.com/atom.xml" rel="self"/>
   <link href="http://brianarn.github.com/"/>
-  <updated>2012-09-05T00:00:08-06:00</updated>
+  <updated>2012-09-05T00:04:08-06:00</updated>
   <id>http://brianarn.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Brian Arnold]]></name>
+    <email><![CDATA[brianarn@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[jsFiddle plugin for Octopress]]></title>
+    <link href="http://brianarn.github.com/blog/2011/08/jsfiddle-plugin/"/>
+    <updated>2011-08-04T21:41:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/08/jsfiddle-plugin</id>
+    <content type="html"><![CDATA[<p>In my post about <a href="http://brianarn.github.com/meta/2011/07/moving-into-octopress/">moving into Octopress</a>, I mused about how
+difficult it might be to make a jsFiddle plugin. Turns out, it wasn&#8217;t that
+hard.</p>
+
+<p>I&#8217;ve created a simple <a href="http://jsfiddle.net">jsFiddle</a> plugin for <a href="http://octopress.org">Octopress</a>. It allows one to
+easily embed a jsFiddle into their page. The syntax is pretty simple. For all
+of these examples, I&#8217;ll be using a fiddle of mine that demonstrates the
+properties of Dojo promises.</p>
+
+<p>Fiddle URL: <a href="http://jsfiddle.net/brianarn/ccWP7/">http://jsfiddle.net/brianarn/ccWP7/</a></p>
+
+<p>Fortunately, the username isn&#8217;t actually required in the URL when using the
+jsFiddle iframe embed code. I&#8217;m referring to the portion identified as <code>ccWP7</code>
+in my URL as the fiddle shortcode. There may be a better name for that, but if
+there is, I have no idea what it is.</p>
+
+<p>Anyhow, let&#8217;s talk about how it works.</p>
+
+<!-- more -->
+
+
+<h2>General syntax:</h2>
+
+<p>The general syntax for usage is pretty straightforward.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle shorttag [tabs] [skin] [height] [width] %}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the case of any of the latter options, the word &#8216;default&#8217; will ensure that
+the plugin fills in the default values as defined by jsFiddle at the time of
+this plugin&#8217;s authoring. The defaults are as follows:</p>
+
+<ul>
+<li>tabs: <code>js,resources,html,css,result</code></li>
+<li>skin: <code>light</code></li>
+<li>height: <code>300px</code></li>
+<li>width: <code>100%</code></li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Basic Example</h3>
+
+<p>As the most basic use case, an example of a simple embed.</p>
+
+<h4>Syntax:</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle ccWP7 %}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Result:</h4>
+
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe>
+
+
+<h3>Adjusting Tabs</h3>
+
+<p>It&#8217;s possible to easily adjust the display order of the tabs. In this case,
+I&#8217;m moving the result to be the first item shown.</p>
+
+<h4>Syntax:</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle ccWP7 result,js,html,css %}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Result</h4>
+
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/ccWP7/embedded/result,js,html,css/light/"></iframe>
+
+
+<h3>Presentation: Skin</h3>
+
+<p>We can easily adjust the skin. Right now, it looks like <code>light</code> and
+<code>presentation</code> are really the only supported options, but if jsFiddle
+announces new options, you can start using them immediately.</p>
+
+<h4>Syntax:</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle ccWP7 default presentation %}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Result:</h4>
+
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/presentation/"></iframe>
+
+
+<h3>Presentation: Height/width</h3>
+
+<p>We can also fairly easily adjust the height and width. In this case, I&#8217;ll make
+it a notably taller fiddle, so that everything can be read more easily (given
+that my fiddle has some write-up in the HTML with some notable output).</p>
+
+<h4>Syntax:</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle ccWP7 default default 600px %}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Result:</h4>
+
+<iframe style="width: 100%; height: 600px" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe>
+
+
+<h3>Multiple Options at once</h3>
+
+<p>For each prior example, I&#8217;ve been changing just one piece, but nothing
+prevents me from adjusting multiple at once. For example, perhaps I want
+something really large for a presentation I&#8217;m giving, and I want my Results
+tab first.</p>
+
+<h4>Syntax:</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% jsfiddle ccWP7 result,js,html,css presentation 800px %}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Result:</h4>
+
+<iframe style="width: 100%; height: 800px" src="http://jsfiddle.net/ccWP7/embedded/result,js,html,css/presentation/"></iframe>
+
+
+<h2>Summary</h2>
+
+<p>If you haven&#8217;t been using it, <a href="http://jsfiddle.net">jsFiddle</a> really is a pretty fantastic
+service. I&#8217;ve been trying to use it when I want to put up something simple and
+quick. I love <a href="http://github.com">GitHub</a> as well, and gists are neat and all, but there&#8217;s
+something special about jsFiddle. This plugin should make it a lot easier to
+simply embed a fiddle (not that copy/pasting the iframe was hard).</p>
+
+<p>I&#8217;ve submitted a pull request to the main Octopress repo, but if you want to
+grab a copy before it gets accepted (if it gets accepted), you can find it in
+my GitHub fork of it
+<a href="https://github.com/brianarn/octopress/blob/master/plugins/jsfiddle.rb">here</a>.
+Here&#8217;s hoping you find some use for it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conditions for Success]]></title>
+    <link href="http://brianarn.github.com/blog/2011/07/conditions-for-success/"/>
+    <updated>2011-07-31T23:19:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/07/conditions-for-success</id>
+    <content type="html"><![CDATA[<p>Earlier today, my friend <a href="http://twitter.com/segdeha">Andrew</a> tweeted the following:</p>
+
+<blockquote><p>Don&#8217;t create success. Create the conditions for success.</p><footer><strong>@segdeha</strong> <cite><a href='https://twitter.com/#!/segdeha/status/97770601162354688'>twitter.com/#!/segdeha/status/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Doing some quick Googling, I&#8217;m sure it&#8217;s not exactly the most original quote
+ever, but it&#8217;s one that really resonated with me. It made me think about what
+I&#8217;m working on doing with my next <a href="http://ignite-nm.com/">Ignite NM</a> talk, which I titled &#8220;Doing
+what you love: Making a hobby into a career&#8221;.</p>
+
+<p>I owe a good deal to Andrew and a bit to dumb luck, but in a way, I&#8217;m doing
+what I am these days not because I went and made my own way, so much as I made
+myself ready for when the opportunities presented themselves.</p>
+
+<p>In my case, I wanted to work on JavaScript full-time. I could have gone and
+become a contractor or consultant or something, but instead, I polished my
+skills. I worked on improving. I read and studied. I spent free time
+experimenting. I created the conditions for success such that when the
+opportunity presented itself, I was ready for it, and I couldn&#8217;t be happier.</p>
+
+<p>Are you doing what you love? If you aren&#8217;t, why not?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moving into Octopress]]></title>
+    <link href="http://brianarn.github.com/blog/2011/07/moving-into-octopress/"/>
+    <updated>2011-07-30T23:10:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/07/moving-into-octopress</id>
+    <content type="html"><![CDATA[<p>So, some months ago, I set up a new blog on <a href="http://github.com">GitHub</a> because I wanted to
+play around with <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and I spent some time making it look half decent.
+It wasn&#8217;t bad (okay, yes it was) and it worked and then I got lazy and haven&#8217;t
+done much with it.</p>
+
+<p>Then a few days ago, <a href="http://www.rebeccamurphey.com/">Rebecca Murphey</a> wrote up <a href="http://rmurphey.com/blog/2011/07/25/switching-to-octopress/">a post</a>
+about her recent shift to <a href="http://octopress.org/">Octopress</a>, which is basically a nice framework
+for Jekyll. It sets up some nice themes and uses <a href="http://sass-lang.com/">Sass</a> to make it super
+easy to customize the really beautiful layout.</p>
+
+<p>I hopped into the #octopress channel on <a href="http://freenode.net/">freenode</a>, asked a question or two,
+got immediate responses, and basically I was able to move my <code>_posts</code>
+directory from before into the Octopress setup. It&#8217;s built to deploy to GitHub
+Pages as well, meaning it was ridiculously easy to get the &#8220;new&#8221; site up.</p>
+
+<p>Of course, I wrote all of two blog posts before, but <a href="http://octopress.org/">Octopress</a> has a few
+niceties to make blogging a bit smoother. It&#8217;s very easy to pull in code
+snippets for display, including from <a href="http://gist.github.com">gists</a>. I wonder how hard it&#8217;d be to
+make a <a href="http://jsfiddle.net">jsFiddle</a> plugin&#8230;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Don't let jQuery DOMinate your thinking]]></title>
+    <link href="http://brianarn.github.com/blog/2011/04/dont-let-jQuery-DOMinate-thinking/"/>
+    <updated>2011-04-18T18:49:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/04/dont-let-jQuery-DOMinate-thinking</id>
+    <content type="html"><![CDATA[<p>For the past few years, I&#8217;ve been working on a side project at the <a href="http://www.unm.edu/">University
+of New Mexico</a>. There&#8217;s not a public-facing aspect to it that&#8217;s worth
+highlighting, but the administrative side is a very heavy JavaScript
+application, and it didn&#8217;t start that way.</p>
+
+<p>There are several pages to the application, each of which is dedicated to a
+major piece of functionality. As our registered user base has grown, the
+amount of information that needs to be managed has grown quite a bit, and some
+of my earlier pages were really starting to slow down.</p>
+
+<p>When we first started building the application, we went with <a href="http://jquery.com/">jQuery</a>. I&#8217;d
+been writing <acronym title="JavaScript">JS</acronym> since before the
+libraries and toolkits were really on the scene, and remember playing with
+things like <a href="http://developer.yahoo.com/yui/">YUI</a> 1.0 and <a href="http://prototypejs.org/">Prototype</a> in prior websites, but my
+coworker/team lead was really keen on trying out this tool that was starting
+to get some traction.</p>
+
+<p>From a <acronym title="Computer Science">CS</acronym> perspective, at first,
+jQuery&#8217;s interface really bothered me. I liked that Prototype made JS feel a
+lot more like C++ to me. It felt like I could build some interaction, using an
+approach that felt natural and proper to me, like it was somehow &#8220;fixing&#8221; JS.
+Also, let&#8217;s be honest: chaining is ugly.</p>
+
+<p>However, jQuery made working with the DOM <em>so</em> much easier, and Ajax work was
+just dead simple (especially when cranking out JSON on the backend), so I
+stuck with it.</p>
+
+<p>After working in jQuery for a while, <em>I stopped thinking about JavaScript</em>. I
+let jQuery kind of take over my brain. For a while, I fell really heavily in
+love with it. It felt just magical. Things just worked. Working with IE wasn&#8217;t
+as awful (though still not great, of course).</p>
+
+<p>I was quite the fan of jQuery &#8211; and in many ways, I still am. jQuery is
+really a fantastic tool for doing DOM manipulation and simple Ajax work. The
+problem is, my application outgrew simple Ajax work and DOM manipulation.</p>
+
+<p>As the application grew in functionality and codebase, performance really
+started to sink. It was quite awful. However, I was fortunate enough to have
+stumbled upon a relatively new podcast named <a href="http://yayquery.com/">yayQuery</a>. Listening to the yQ
+crew talk about anti-patterns and hiddenhancements and such, I really grew
+interested in optimization. When jQuery 1.4 came out, I was ready to take
+advantage of it, and managed to take one particular page from a load time of
+~12 seconds to ~3.</p>
+
+<p>Over the past year, I&#8217;ve gone through and created a couple of new pages to
+replace some of the worst offenders, and tried cleaning up here and there where
+possible, but on the whole, I realized the major problem I&#8217;d run into was that
+I stopped thinking about my data as data, and started thinking about it more
+as DOM.</p>
+
+<p>If there is one takeaway from my entire ramble here, it is this: Don&#8217;t let
+jQuery DOMinate your thinking. When all you have is a DOM hammer, everything
+is a DOM node.</p>
+
+<p>I had been creating ridiculously complex markup with a lot of hidden elements
+in order to preserve data, rather than using things like <code>jQuery.data</code> to
+store JS objects. I was also doing things like not saving my resulting jQuery
+objects, running code like <code>$("#foo")</code> repeatedly, not thinking about the
+impact of creating several new jQuery collections. It&#8217;s almost embarassing to
+admit that I was generating a bunch of <code>&lt;li&gt;</code> tags and actively adding them to
+the DOM one at a time, for literally hundreds of list items, but I was.</p>
+
+<p>You&#8217;ll note that <strong>not</strong> all of the things I was doing above are jQuery&#8217;s
+fault.  It&#8217;s just that with jQuery, I stopped thinking about JavaScript &#8211;
+and, in retrospect, that was a really bad thing.</p>
+
+<p>These days, I&#8217;m doing a lot with <a href="http://dojotoolkit.org/">Dojo</a> and while it&#8217;s not the JS panacea,
+it&#8217;s the first of all of the toolkits and libraries that&#8217;s felt like I&#8217;m
+really writing JavaScript, and not just writing something else that doesn&#8217;t
+feel like JS. I&#8217;ve grown to love JavaScript as a language for its own merits.</p>
+
+<p>So, whether you&#8217;re coming to this post and you&#8217;re a huge jQuery fan who hasn&#8217;t
+tried other tools, or you&#8217;re a seasoned vet with the DHTML scars to prove it
+&#8211; I encourage you, reach out and try something else. It doesn&#8217;t matter what
+you go for, so much as you&#8217;re trying something different.</p>
+
+<h3>Resources</h3>
+
+<p>Larger libraries/toolkits (typically cross-browser, all with rich DOM/Ajax support,
+often including UI frameworks, etc):</p>
+
+<ul>
+<li><a href="http://dojotoolkit.org/">Dojo</a></li>
+<li><a href="http://developer.yahoo.com/yui/">YUI</a></li>
+<li><a href="http://mootools.net/">MooTools</a></li>
+<li><a href="http://prototypejs.org/">Prototype</a></li>
+</ul>
+
+
+<p>Smaller libraries (focused on specific pieces of functionality):</p>
+
+<ul>
+<li><a href="http://documentcloud.github.com/underscore/">Underscore</a></li>
+<li><a href="http://documentcloud.github.com/backbone/">Backbone</a></li>
+<li><a href="http://zeptojs.com/">Zepto</a></li>
+</ul>
+
+
+<p>Other reading:</p>
+
+<ul>
+<li><a href="http://blog.rebeccamurphey.com/on-jquery-large-applications">On jQuery &amp; Large Application</a> (the original impetus for this post)</li>
+<li><a href="http://jquerysbestfriends.com/#slide1">jQuery&#8217;s Best Friends</a></li>
+<li><a href="http://blog.rebeccamurphey.com/when-youre-building-a-non-trivial-js-applicat">When you&#8217;re build a non-trivial JS application&#8230;</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Proof of Concept: ScoreSettler]]></title>
+    <link href="http://brianarn.github.com/blog/2011/03/scoresettler/"/>
+    <updated>2011-03-29T19:30:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/03/scoresettler</id>
+    <content type="html"><![CDATA[<p>When I&#8217;m playing <a href="http://www.catan.com/catan-games/boardgame.html">Settlers of Catan</a> with friends, it <em>always</em> seems
+like either 6 or 8 is really hot, and dominates the rolls. I realize that
+they&#8217;re common rolls, and that 7 is theoretically the most common roll, but it
+never quite seems that way, that either 6 or 8 is dominant. It also seems like
+5 or 9 is way more frequent than its statistical pairing, and I&#8217;ve wanted an
+easy way to track these stats in the past.</p>
+
+<p>So, I thought, &#8220;Hey, I know how to code, it would be a simple UI in a browser,
+with minimal JS needs, just make it already.&#8221; I got out my notebook and
+sketched out some ideas on UI&#8230; and then let it sit for quite awhile. I&#8217;m
+pretty sure it&#8217;s been at least six months, if not more.</p>
+
+<p>It&#8217;s been kind of bothering me for awhile now, and even though we don&#8217;t play
+Settlers as much these days (<a href="http://www.riograndegames.com/games.html?id=278">Dominion</a> is amazing), I&#8217;ve <em>still</em> wanted
+to build it. Tonight, finally, I just sat down for a couple of hours and poked
+it out of my head, and called it <a href="http://brianarn.github.com/ScoreSettler">ScoreSettler</a>.</p>
+
+<p>You can now go <a href="http://brianarn.github.com/ScoreSettler">try it out</a> or <a href="http://github.com/brianarn/ScoreSettler">clone/fork the source</a> for yourself.
+It&#8217;s all here on GitHub, right alongside this blog. I&#8217;d call it a proof of
+concept at this point, which means that if I never come back to it, I can
+still consider it complete, right?</p>
+
+<p>I make no claims as to the quality of the code. It&#8217;s fairly simple and
+requires a modern browser (which means no IE &lt; 9), as I&#8217;m not using any JS
+libraries to do anything. It&#8217;s just plain and simple JS, using event
+listeners. I&#8217;m sure it&#8217;s not perfect, that there&#8217;s spots to optimize, that it
+could use a better coat of paint, but hey, it works.</p>
+
+<p>It even has a rolling simulator, which I was using for testing. It&#8217;s kind of
+fun to just watch it roll away though.</p>
+
+<p>Heck, it works on the iPad, meaning I could, in theory, use it right now &#8211;
+and that&#8217;s awesome.</p>
+
+<p>So, yeah. Feel free to <a href="http://brianarn.github.com/ScoreSettler">go play</a>, or <a href="http://github.com/brianarn/ScoreSettler">fork it</a> and make it pretty or
+something. It&#8217;s nothing that huge or exciting, but I&#8217;m glad to have it out of
+my head now, and I look forward to tracking my next game of <a href="http://www.catan.com/catan-games/boardgame.html">Settlers</a>
+to see how the dice are screwing me. :)</p>
+]]></content>
+  </entry>
   
 </feed>

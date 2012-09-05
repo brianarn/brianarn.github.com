@@ -1,11 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://brianarn.github.com/blog/2011/03/scoresettler/</loc>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://brianarn.github.com/blog/2011/04/dont-let-jQuery-DOMinate-thinking/</loc>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://brianarn.github.com/blog/2011/07/moving-into-octopress/</loc>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://brianarn.github.com/blog/2011/07/conditions-for-success/</loc>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://brianarn.github.com/blog/2011/08/jsfiddle-plugin/</loc>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
+    </url>
+    <url>
         <loc>http://brianarn.github.com/blog/archives/</loc>
-        <lastmod>2012-09-04T23:59:19-06:00</lastmod>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
     </url>
     <url>
         <loc>http://brianarn.github.com/</loc>
-        <lastmod>2012-09-04T23:59:19-06:00</lastmod>
+        <lastmod>2012-09-05T00:03:06-06:00</lastmod>
     </url>
 </urlset>

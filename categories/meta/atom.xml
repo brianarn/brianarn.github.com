@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meta | brianarn@github]]></title>
+  <link href="http://brianarn.github.com/categories/meta/atom.xml" rel="self"/>
+  <link href="http://brianarn.github.com/"/>
+  <updated>2012-09-05T00:04:08-06:00</updated>
+  <id>http://brianarn.github.com/</id>
+  <author>
+    <name><![CDATA[Brian Arnold]]></name>
+    <email><![CDATA[brianarn@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Moving into Octopress]]></title>
+    <link href="http://brianarn.github.com/blog/2011/07/moving-into-octopress/"/>
+    <updated>2011-07-30T23:10:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/07/moving-into-octopress</id>
+    <content type="html"><![CDATA[<p>So, some months ago, I set up a new blog on <a href="http://github.com">GitHub</a> because I wanted to
+play around with <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and I spent some time making it look half decent.
+It wasn't bad (okay, yes it was) and it worked and then I got lazy and haven't
+done much with it.</p>
+
+<p>Then a few days ago, <a href="http://www.rebeccamurphey.com/">Rebecca Murphey</a> wrote up <a href="http://rmurphey.com/blog/2011/07/25/switching-to-octopress/">a post</a>
+about her recent shift to <a href="http://octopress.org/">Octopress</a>, which is basically a nice framework
+for Jekyll. It sets up some nice themes and uses <a href="http://sass-lang.com/">Sass</a> to make it super
+easy to customize the really beautiful layout.</p>
+
+<p>I hopped into the #octopress channel on <a href="http://freenode.net/">freenode</a>, asked a question or two,
+got immediate responses, and basically I was able to move my <code>_posts</code>
+directory from before into the Octopress setup. It's built to deploy to GitHub
+Pages as well, meaning it was ridiculously easy to get the "new" site up.</p>
+
+<p>Of course, I wrote all of two blog posts before, but <a href="http://octopress.org/">Octopress</a> has a few
+niceties to make blogging a bit smoother. It's very easy to pull in code
+snippets for display, including from <a href="http://gist.github.com">gists</a>. I wonder how hard it'd be to
+make a <a href="http://jsfiddle.net">jsFiddle</a> plugin...</p>
+]]></content>
+  </entry>
+  
+</feed>

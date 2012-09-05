@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: experiments | brianarn@github]]></title>
+  <link href="http://brianarn.github.com/categories/experiments/atom.xml" rel="self"/>
+  <link href="http://brianarn.github.com/"/>
+  <updated>2012-09-05T00:04:08-06:00</updated>
+  <id>http://brianarn.github.com/</id>
+  <author>
+    <name><![CDATA[Brian Arnold]]></name>
+    <email><![CDATA[brianarn@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Proof of Concept: ScoreSettler]]></title>
+    <link href="http://brianarn.github.com/blog/2011/03/scoresettler/"/>
+    <updated>2011-03-29T19:30:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/03/scoresettler</id>
+    <content type="html"><![CDATA[<p>When I'm playing <a href="http://www.catan.com/catan-games/boardgame.html">Settlers of Catan</a> with friends, it <em>always</em> seems
+like either 6 or 8 is really hot, and dominates the rolls. I realize that
+they're common rolls, and that 7 is theoretically the most common roll, but it
+never quite seems that way, that either 6 or 8 is dominant. It also seems like
+5 or 9 is way more frequent than its statistical pairing, and I've wanted an
+easy way to track these stats in the past.</p>
+
+<p>So, I thought, "Hey, I know how to code, it would be a simple UI in a browser,
+with minimal JS needs, just make it already." I got out my notebook and
+sketched out some ideas on UI... and then let it sit for quite awhile. I'm
+pretty sure it's been at least six months, if not more.</p>
+
+<p>It's been kind of bothering me for awhile now, and even though we don't play
+Settlers as much these days (<a href="http://www.riograndegames.com/games.html?id=278">Dominion</a> is amazing), I've <em>still</em> wanted
+to build it. Tonight, finally, I just sat down for a couple of hours and poked
+it out of my head, and called it <a href="{{">ScoreSettler</a>.</p>
+
+<p>You can now go <a href="{{">try it out</a> or <a href="http://github.com/brianarn/ScoreSettler">clone/fork the source</a> for yourself.
+It's all here on GitHub, right alongside this blog. I'd call it a proof of
+concept at this point, which means that if I never come back to it, I can
+still consider it complete, right?</p>
+
+<p>I make no claims as to the quality of the code. It's fairly simple and
+requires a modern browser (which means no IE &lt; 9), as I'm not using any JS
+libraries to do anything. It's just plain and simple JS, using event
+listeners. I'm sure it's not perfect, that there's spots to optimize, that it
+could use a better coat of paint, but hey, it works.</p>
+
+<p>It even has a rolling simulator, which I was using for testing. It's kind of
+fun to just watch it roll away though.</p>
+
+<p>Heck, it works on the iPad, meaning I could, in theory, use it right now --
+and that's awesome.</p>
+
+<p>So, yeah. Feel free to <a href="{{">go play</a>, or <a href="http://github.com/brianarn/ScoreSettler">fork it</a> and make it pretty or
+something. It's nothing that huge or exciting, but I'm glad to have it out of
+my head now, and I look forward to tracking my next game of <a href="http://www.catan.com/catan-games/boardgame.html">Settlers</a>
+to see how the dice are screwing me. :)</p>
+]]></content>
+  </entry>
+  
+</feed>

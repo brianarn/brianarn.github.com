@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: thoughts | brianarn@github]]></title>
+  <link href="http://brianarn.github.com/categories/thoughts/atom.xml" rel="self"/>
+  <link href="http://brianarn.github.com/"/>
+  <updated>2012-09-05T00:04:08-06:00</updated>
+  <id>http://brianarn.github.com/</id>
+  <author>
+    <name><![CDATA[Brian Arnold]]></name>
+    <email><![CDATA[brianarn@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conditions for Success]]></title>
+    <link href="http://brianarn.github.com/blog/2011/07/conditions-for-success/"/>
+    <updated>2011-07-31T23:19:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/07/conditions-for-success</id>
+    <content type="html"><![CDATA[<p>Earlier today, my friend <a href="http://twitter.com/segdeha">Andrew</a> tweeted the following:</p>
+
+<p><blockquote><p>Don't create success. Create the conditions for success.</p><footer><strong>@segdeha</strong> <cite><a href='https://twitter.com/#!/segdeha/status/97770601162354688'>twitter.com/#!/segdeha/status/&hellip;</a></cite></footer></blockquote></p>
+
+<p>Doing some quick Googling, I'm sure it's not exactly the most original quote
+ever, but it's one that really resonated with me. It made me think about what
+I'm working on doing with my next <a href="http://ignite-nm.com/">Ignite NM</a> talk, which I titled "Doing
+what you love: Making a hobby into a career".</p>
+
+<p>I owe a good deal to Andrew and a bit to dumb luck, but in a way, I'm doing
+what I am these days not because I went and made my own way, so much as I made
+myself ready for when the opportunities presented themselves.</p>
+
+<p>In my case, I wanted to work on JavaScript full-time. I could have gone and
+become a contractor or consultant or something, but instead, I polished my
+skills. I worked on improving. I read and studied. I spent free time
+experimenting. I created the conditions for success such that when the
+opportunity presented itself, I was ready for it, and I couldn't be happier.</p>
+
+<p>Are you doing what you love? If you aren't, why not?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Don't let jQuery DOMinate your thinking]]></title>
+    <link href="http://brianarn.github.com/blog/2011/04/dont-let-jQuery-DOMinate-thinking/"/>
+    <updated>2011-04-18T18:49:00-06:00</updated>
+    <id>http://brianarn.github.com/blog/2011/04/dont-let-jQuery-DOMinate-thinking</id>
+    <content type="html"><![CDATA[<p>For the past few years, I've been working on a side project at the <a href="http://www.unm.edu/">University
+of New Mexico</a>. There's not a public-facing aspect to it that's worth
+highlighting, but the administrative side is a very heavy JavaScript
+application, and it didn't start that way.</p>
+
+<p>There are several pages to the application, each of which is dedicated to a
+major piece of functionality. As our registered user base has grown, the
+amount of information that needs to be managed has grown quite a bit, and some
+of my earlier pages were really starting to slow down.</p>
+
+<p>When we first started building the application, we went with <a href="http://jquery.com/">jQuery</a>. I'd
+been writing <acronym title="JavaScript">JS</acronym> since before the
+libraries and toolkits were really on the scene, and remember playing with
+things like <a href="http://developer.yahoo.com/yui/">YUI</a> 1.0 and <a href="http://prototypejs.org/">Prototype</a> in prior websites, but my
+coworker/team lead was really keen on trying out this tool that was starting
+to get some traction.</p>
+
+<p>From a <acronym title="Computer Science">CS</acronym> perspective, at first,
+jQuery's interface really bothered me. I liked that Prototype made JS feel a
+lot more like C++ to me. It felt like I could build some interaction, using an
+approach that felt natural and proper to me, like it was somehow "fixing" JS.
+Also, let's be honest: chaining is ugly.</p>
+
+<p>However, jQuery made working with the DOM <em>so</em> much easier, and Ajax work was
+just dead simple (especially when cranking out JSON on the backend), so I
+stuck with it.</p>
+
+<p>After working in jQuery for a while, <em>I stopped thinking about JavaScript</em>. I
+let jQuery kind of take over my brain. For a while, I fell really heavily in
+love with it. It felt just magical. Things just worked. Working with IE wasn't
+as awful (though still not great, of course).</p>
+
+<p>I was quite the fan of jQuery -- and in many ways, I still am. jQuery is
+really a fantastic tool for doing DOM manipulation and simple Ajax work. The
+problem is, my application outgrew simple Ajax work and DOM manipulation.</p>
+
+<p>As the application grew in functionality and codebase, performance really
+started to sink. It was quite awful. However, I was fortunate enough to have
+stumbled upon a relatively new podcast named <a href="http://yayquery.com/">yayQuery</a>. Listening to the yQ
+crew talk about anti-patterns and hiddenhancements and such, I really grew
+interested in optimization. When jQuery 1.4 came out, I was ready to take
+advantage of it, and managed to take one particular page from a load time of
+~12 seconds to ~3.</p>
+
+<p>Over the past year, I've gone through and created a couple of new pages to
+replace some of the worst offenders, and tried cleaning up here and there where
+possible, but on the whole, I realized the major problem I'd run into was that
+I stopped thinking about my data as data, and started thinking about it more
+as DOM.</p>
+
+<p>If there is one takeaway from my entire ramble here, it is this: Don't let
+jQuery DOMinate your thinking. When all you have is a DOM hammer, everything
+is a DOM node.</p>
+
+<p>I had been creating ridiculously complex markup with a lot of hidden elements
+in order to preserve data, rather than using things like <code>jQuery.data</code> to
+store JS objects. I was also doing things like not saving my resulting jQuery
+objects, running code like <code>$("#foo")</code> repeatedly, not thinking about the
+impact of creating several new jQuery collections. It's almost embarassing to
+admit that I was generating a bunch of <code>&lt;li&gt;</code> tags and actively adding them to
+the DOM one at a time, for literally hundreds of list items, but I was.</p>
+
+<p>You'll note that <strong>not</strong> all of the things I was doing above are jQuery's
+fault.  It's just that with jQuery, I stopped thinking about JavaScript --
+and, in retrospect, that was a really bad thing.</p>
+
+<p>These days, I'm doing a lot with <a href="http://dojotoolkit.org/">Dojo</a> and while it's not the JS panacea,
+it's the first of all of the toolkits and libraries that's felt like I'm
+really writing JavaScript, and not just writing something else that doesn't
+feel like JS. I've grown to love JavaScript as a language for its own merits.</p>
+
+<p>So, whether you're coming to this post and you're a huge jQuery fan who hasn't
+tried other tools, or you're a seasoned vet with the DHTML scars to prove it
+-- I encourage you, reach out and try something else. It doesn't matter what
+you go for, so much as you're trying something different.</p>
+
+<h3>Resources</h3>
+
+<p>Larger libraries/toolkits (typically cross-browser, all with rich DOM/Ajax support,
+often including UI frameworks, etc):</p>
+
+<ul>
+<li><a href="http://dojotoolkit.org/">Dojo</a></li>
+<li><a href="http://developer.yahoo.com/yui/">YUI</a></li>
+<li><a href="http://mootools.net/">MooTools</a></li>
+<li><a href="http://prototypejs.org/">Prototype</a></li>
+</ul>
+
+
+<p>Smaller libraries (focused on specific pieces of functionality):</p>
+
+<ul>
+<li><a href="http://documentcloud.github.com/underscore/">Underscore</a></li>
+<li><a href="http://documentcloud.github.com/backbone/">Backbone</a></li>
+<li><a href="http://zeptojs.com/">Zepto</a></li>
+</ul>
+
+
+<p>Other reading:</p>
+
+<ul>
+<li><a href="http://blog.rebeccamurphey.com/on-jquery-large-applications">On jQuery &amp; Large Application</a> (the original impetus for this post)</li>
+<li><a href="http://jquerysbestfriends.com/#slide1">jQuery's Best Friends</a></li>
+<li><a href="http://blog.rebeccamurphey.com/when-youre-building-a-non-trivial-js-applicat">When you're build a non-trivial JS application...</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
