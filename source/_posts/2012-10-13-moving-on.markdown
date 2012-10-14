@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Moving on"
+date: 2012-10-13 22:45
+comments: true
+categories: 
+---
+For reference, this blog is no longer being maintained. Content has been
+integrated into [RandomThink.net][]. Please subscribe over there if you've been
+following this blog. Thanks!
+
+[RandomThink.net]: http://www.randomthink.net/blog/
